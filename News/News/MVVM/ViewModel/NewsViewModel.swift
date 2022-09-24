@@ -21,6 +21,20 @@ class NewsViewModel: ObservableObject {
     let request = SFSpeechAudioBufferRecognitionRequest()
     var task : SFSpeechRecognitionTask!
     var cancellation: AnyCancellable?
+    var player: AVAudioPlayer?
+    
+    func PlaySound(resource: String) {
+        
+        let path = Bundle.main.path(forResource: resource, ofType:nil)!
+        let url = URL(fileURLWithPath: path)
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            player?.play()
+        } catch {
+            
+        }
+    }
     
     func Speak(word: String) {
         let utterance = AVSpeechUtterance(string: word)
@@ -149,6 +163,29 @@ class NewsViewModel: ObservableObject {
         }
     }
     
+    func CurrentCategorySound(category: NewsCategory) {
+        switch category.id {
+        
+        case 1:
+            PlaySound(resource: "newspaper.mp3")
+            
+        case 2:
+            PlaySound(resource: "future click sound.wav")
+            
+        case 3:
+            PlaySound(resource: "sport.wav")
+            
+        case 4:
+            PlaySound(resource: "money.mp3")
+            
+        case 5:
+            PlaySound(resource: "entertainment.mp3")
+                        
+        default:
+            break
+        }
+    }
+    
     func RandomCategory() {
         let urls = ["https://newsapi.org/v2/top-headlines?country=ru&category=general&apiKey=apiKey", "https://newsapi.org/v2/top-headlines?country=ru&category=technology&apiKey=apiKey", "https://newsapi.org/v2/top-headlines?country=ru&category=sport&apiKey=apiKey","https://newsapi.org/v2/top-headlines?country=ru&category=business&apiKey=apiKey", "https://newsapi.org/v2/top-headlines?country=ru&category=entertainment&apiKey=apiKey"]
         
@@ -190,7 +227,8 @@ class NewsViewModel: ObservableObject {
                 return error
             })
             .sink(receiveCompletion: { _ in }, receiveValue: { news in
-                self.news = news.articles ?? self.news
+                guard let news = news.articles else {return}
+                self.news = news
             })
      }
     
