@@ -11,7 +11,6 @@ import HidableTabView
 
 struct WebView: UIViewRepresentable {
     
-    
     var url: String
     
     func makeUIView(context: UIViewRepresentableContext<WebView>) -> WKWebView {

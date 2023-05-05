@@ -21,13 +21,18 @@
 		82D8466128839CDE00C766CD /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D8465F28839CDD00C766CD /* Article.swift */; };
 		82D846822883A01200C766CD /* TopNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D846812883A01200C766CD /* TopNewsView.swift */; };
 		82D846932883C49300C766CD /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D846922883C49300C766CD /* WebView.swift */; };
-		DB0506598B4510257AAFA87A /* Pods_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B999E22A51B1F7BF97F486 /* Pods_News.framework */; };
+		82FF293C28DE54E0004263F4 /* future click sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 82FF293B28DE54E0004263F4 /* future click sound.wav */; };
+		82FF293E28DE5691004263F4 /* newspaper.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 82FF293D28DE5691004263F4 /* newspaper.mp3 */; };
+		82FF294028DE57E2004263F4 /* sport.wav in Resources */ = {isa = PBXBuildFile; fileRef = 82FF293F28DE57E2004263F4 /* sport.wav */; };
+		82FF294228DF7A9E004263F4 /* dice.wav in Resources */ = {isa = PBXBuildFile; fileRef = 82FF294128DF7A9E004263F4 /* dice.wav */; };
+		82FF294428DF7D24004263F4 /* money.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 82FF294328DF7D23004263F4 /* money.mp3 */; };
+		82FF294628DF7F8F004263F4 /* entertainment.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 82FF294528DF7F8E004263F4 /* entertainment.mp3 */; };
+		9B80D11DDBAA294DDE39B500 /* Pods_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CED56429CEC800AEDC4FEEE /* Pods_News.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		381A9147A2579E1A3A3842BF /* Pods-News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.release.xcconfig"; path = "Target Support Files/Pods-News/Pods-News.release.xcconfig"; sourceTree = "<group>"; };
-		39AD30C8BB0CD4DA976AE294 /* Pods-News.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.debug.xcconfig"; path = "Target Support Files/Pods-News/Pods-News.debug.xcconfig"; sourceTree = "<group>"; };
-		59B999E22A51B1F7BF97F486 /* Pods_News.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_News.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B91602091C3805AB88BF365 /* Pods-News.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.debug.xcconfig"; path = "Target Support Files/Pods-News/Pods-News.debug.xcconfig"; sourceTree = "<group>"; };
+		5CED56429CEC800AEDC4FEEE /* Pods_News.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_News.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		823CBF4A28903AEC0065F33E /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		8284C912288C1F0B00AF71EB /* NewsCategoriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCategoriesView.swift; sourceTree = "<group>"; };
 		8284C913288C1F0B00AF71EB /* NewsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
@@ -43,6 +48,13 @@
 		82D846812883A01200C766CD /* TopNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNewsView.swift; sourceTree = "<group>"; };
 		82D846922883C49300C766CD /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		82D846942883C58400C766CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		82FF293B28DE54E0004263F4 /* future click sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "future click sound.wav"; path = "../../../../QUIZ/QUIZ/sounds/future click sound.wav"; sourceTree = "<group>"; };
+		82FF293D28DE5691004263F4 /* newspaper.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = newspaper.mp3; path = ../../../../../Downloads/newspaper.mp3; sourceTree = "<group>"; };
+		82FF293F28DE57E2004263F4 /* sport.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = sport.wav; path = ../../../../../Downloads/sport.wav; sourceTree = "<group>"; };
+		82FF294128DF7A9E004263F4 /* dice.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = dice.wav; path = ../../../../../Downloads/dice.wav; sourceTree = "<group>"; };
+		82FF294328DF7D23004263F4 /* money.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = money.mp3; path = ../../../../../Downloads/money.mp3; sourceTree = "<group>"; };
+		82FF294528DF7F8E004263F4 /* entertainment.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = entertainment.mp3; path = ../../../../../Downloads/entertainment.mp3; sourceTree = "<group>"; };
+		B56764FAE09A66810075B858 /* Pods-News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.release.xcconfig"; path = "Target Support Files/Pods-News/Pods-News.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82C2A847288EE40400CD18E2 /* HidableTabView in Frameworks */,
-				DB0506598B4510257AAFA87A /* Pods_News.framework in Frameworks */,
+				9B80D11DDBAA294DDE39B500 /* Pods_News.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,8 +73,8 @@
 		379E06A3B7182A7E90957251 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				39AD30C8BB0CD4DA976AE294 /* Pods-News.debug.xcconfig */,
-				381A9147A2579E1A3A3842BF /* Pods-News.release.xcconfig */,
+				3B91602091C3805AB88BF365 /* Pods-News.debug.xcconfig */,
+				B56764FAE09A66810075B858 /* Pods-News.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -73,7 +85,7 @@
 				82D8464A28839C8000C766CD /* News */,
 				82D8464928839C8000C766CD /* Products */,
 				379E06A3B7182A7E90957251 /* Pods */,
-				94833A98E731F37AB098237A /* Frameworks */,
+				8E5CE4C6CA087121A0D8E5A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,12 +100,13 @@
 		82D8464A28839C8000C766CD /* News */ = {
 			isa = PBXGroup;
 			children = (
-				82D846942883C58400C766CD /* Info.plist */,
+				82FF293828DE531A004263F4 /* sounds */,
 				82D8465A28839CB600C766CD /* Views */,
 				82D8465928839CB200C766CD /* MVVM */,
 				82D8464B28839C8000C766CD /* NewsApp.swift */,
 				82D8464D28839C8000C766CD /* ContentView.swift */,
 				82D8464F28839C8200C766CD /* Assets.xcassets */,
+				82D846942883C58400C766CD /* Info.plist */,
 				82D8465128839C8200C766CD /* Preview Content */,
 			);
 			path = News;
@@ -154,10 +167,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		94833A98E731F37AB098237A /* Frameworks */ = {
+		82FF293828DE531A004263F4 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
-				59B999E22A51B1F7BF97F486 /* Pods_News.framework */,
+				82FF294128DF7A9E004263F4 /* dice.wav */,
+				82FF293D28DE5691004263F4 /* newspaper.mp3 */,
+				82FF293B28DE54E0004263F4 /* future click sound.wav */,
+				82FF293F28DE57E2004263F4 /* sport.wav */,
+				82FF294328DF7D23004263F4 /* money.mp3 */,
+				82FF294528DF7F8E004263F4 /* entertainment.mp3 */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
+		8E5CE4C6CA087121A0D8E5A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CED56429CEC800AEDC4FEEE /* Pods_News.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -169,11 +195,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82D8465628839C8200C766CD /* Build configuration list for PBXNativeTarget "News" */;
 			buildPhases = (
-				1A7408824B78FEF080C7C748 /* [CP] Check Pods Manifest.lock */,
+				6B78A5B0EB9EA66118BE36D9 /* [CP] Check Pods Manifest.lock */,
 				82D8464428839C8000C766CD /* Sources */,
 				82D8464528839C8000C766CD /* Frameworks */,
 				82D8464628839C8000C766CD /* Resources */,
-				B4DD1FD703777A6434A97332 /* [CP] Embed Pods Frameworks */,
+				CD49179A9FDB1CF1FDBD0318 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -228,15 +254,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82FF293E28DE5691004263F4 /* newspaper.mp3 in Resources */,
+				82FF294028DE57E2004263F4 /* sport.wav in Resources */,
+				82FF293C28DE54E0004263F4 /* future click sound.wav in Resources */,
 				82D8465328839C8200C766CD /* Preview Assets.xcassets in Resources */,
+				82FF294228DF7A9E004263F4 /* dice.wav in Resources */,
+				82FF294628DF7F8F004263F4 /* entertainment.mp3 in Resources */,
 				82D8465028839C8200C766CD /* Assets.xcassets in Resources */,
+				82FF294428DF7D24004263F4 /* money.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1A7408824B78FEF080C7C748 /* [CP] Check Pods Manifest.lock */ = {
+		6B78A5B0EB9EA66118BE36D9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -258,7 +290,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B4DD1FD703777A6434A97332 /* [CP] Embed Pods Frameworks */ = {
+		CD49179A9FDB1CF1FDBD0318 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -415,7 +447,7 @@
 		};
 		82D8465728839C8200C766CD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39AD30C8BB0CD4DA976AE294 /* Pods-News.debug.xcconfig */;
+			baseConfigurationReference = 3B91602091C3805AB88BF365 /* Pods-News.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -450,7 +482,7 @@
 		};
 		82D8465828839C8200C766CD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 381A9147A2579E1A3A3842BF /* Pods-News.release.xcconfig */;
+			baseConfigurationReference = B56764FAE09A66810075B858 /* Pods-News.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

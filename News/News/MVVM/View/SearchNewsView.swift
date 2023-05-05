@@ -44,10 +44,9 @@ struct SearchNewsView: View {
             }
             .toolbar(content: {
                 
-                ToolbarItem(){
+                ToolbarItem() {
                     
                     HStack {
-                        
                         
                         Button {
                             newsViewModel.isStart = !newsViewModel.isStart
@@ -66,6 +65,7 @@ struct SearchNewsView: View {
                         
                         Button(action: {
                             newsViewModel.RandomCategory()
+                            newsViewModel.PlaySound(resource: "dice.wav")
                         }) {
                             Image(systemName: "dice")
                         }

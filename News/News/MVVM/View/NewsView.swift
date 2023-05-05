@@ -39,6 +39,7 @@ struct NewsView: View {
                 }
             }
         }.onAppear {
+            newsViewModel.CurrentCategorySound(category: category)
             newsViewModel.CurrentCategory(category: category)
             newsViewModel.GetNews()
             UITabBar.hideTabBar(animated: true)
