@@ -10,6 +10,8 @@ import SDWebImageSwiftUI
 
 struct RoundedImageView: View {
     
+    @State var isAnimation = false
+    
     var image: String
     var width: CGFloat
     var height: CGFloat
@@ -28,7 +30,14 @@ struct RoundedImageView: View {
                 .frame(width: width, height: height)
                 .clipShape(Circle())
                 .overlay(Circle().stroke(color, lineWidth: lineWidth))
+                // MARK: - пружинная анимация
+                .scaleEffect(isAnimation ? 1.1 : 1, anchor: .bottom)
+                .animation(.interpolatingSpring(stiffness: 170, damping: 8).delay(0.4), value: isAnimation)
                 .onTapGesture {
+                    isAnimation.toggle()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        self.isAnimation = false
+                    }
                     player.PlaySound(resource: sound)
                 }
         } else {
@@ -38,7 +47,14 @@ struct RoundedImageView: View {
                 .frame(width: width, height: height)
                 .clipShape(Circle())
                 .overlay(Circle().stroke(color, lineWidth: lineWidth))
+                // MARK: - пружинная анимация
+                .scaleEffect(isAnimation ? 1.1 : 1, anchor: .bottom)
+                .animation(.interpolatingSpring(stiffness: 170, damping: 8).delay(0.4), value: isAnimation)
                 .onTapGesture {
+                    isAnimation.toggle()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        self.isAnimation = false
+                    }
                     player.PlaySound(resource: sound)
               }
         }
