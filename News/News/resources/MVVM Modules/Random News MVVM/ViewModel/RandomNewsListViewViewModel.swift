@@ -11,6 +11,8 @@ class RandomNewsListViewViewModel: ObservableObject {
     
     @Published var news = [Article]()
     @Published var title = "Рандом"
+    @Published var CategoryIcon = ""
+    @Published var CategorySound = ""
     
     // MARK: - сервисы
     private let randomManager = RandomManager()
@@ -22,6 +24,8 @@ class RandomNewsListViewViewModel: ObservableObject {
         let category = randomManager.ReturnRandomElement(array: Categories.categories) as! NewsCategoryModel
         title = category.name
         player.PlaySound(resource: category.sound)
+        CategoryIcon = category.icon
+        CategorySound = category.sound
         newsService.execute(with: News.self, category: category.endpoint) { [weak self] result in
             switch result {
             case .success(let data):
@@ -31,5 +35,9 @@ class RandomNewsListViewViewModel: ObservableObject {
                 print(error)
             }
         }
+    }
+    
+    func PlayCategorySound() {
+        player.PlaySound(resource: CategorySound)
     }
 }
