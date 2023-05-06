@@ -13,7 +13,7 @@ struct ArticleCell: View {
     
     var body: some View {
         HStack(spacing: 15) {
-            RoundedImageView(image: article.urlToImage ?? "https://media.istockphoto.com/id/1175387759/vector/camera-icon.jpg?s=612x612&w=0&k=20&c=paC1ZkU31dH2B5epXqT_cYOyca5uqh4v0WpFUldCUBE=", width: 90, height: 90, color: .black, lineWidth: 5, isURL: true)
+            RoundedImageView(image: article.urlToImage ?? "https://media.istockphoto.com/id/1175387759/vector/camera-icon.jpg?s=612x612&w=0&k=20&c=paC1ZkU31dH2B5epXqT_cYOyca5uqh4v0WpFUldCUBE=", width: 90, height: 90, color: .black, lineWidth: 5, sound: "newspaper.mp3", isURL: true)
             VStack(alignment: .leading) {
                 Text(article.title)
                     .fontWeight(.black)

@@ -11,7 +11,7 @@ class RandomNewsListViewViewModel: ObservableObject {
     
     @Published var news = [Article]()
     @Published var title = "Рандом"
-    @Published var CategoryIcon = ""
+    @Published var CategoryIcon = "random"
     @Published var CategorySound = ""
     
     // MARK: - сервисы

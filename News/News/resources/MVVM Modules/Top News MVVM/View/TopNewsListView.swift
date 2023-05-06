@@ -15,20 +15,22 @@ struct TopNewsListView: View {
     var body: some View {
         NavigationView {
             ArticlesListView(news: viewModel.news)
-            .navigationBarTitle("Главное")
-            .onAppear {
-                UITabBar.showTabBar(animated: true)
-            }
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar(content: {
-                ToolbarItem() {
+                ToolbarItem(placement: .principal) {
                     HStack {
                         Image("top news")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 40, height: 40)
+                        Text("Главное")
+                            .fontWeight(.black)
                     }
                }
            })
+            .onAppear {
+                UITabBar.showTabBar(animated: true)
+            }
         }
     }
 }

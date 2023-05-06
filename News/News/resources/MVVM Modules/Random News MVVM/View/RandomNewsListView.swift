@@ -15,28 +15,27 @@ struct RandomNewsListView: View {
     var body: some View {
         NavigationView {
             ArticlesListView(news: viewModel.news)
-                .navigationBarTitle(viewModel.title)
-                .onAppear {
-                    UITabBar.showTabBar(animated: true)
-                }
+                .navigationBarTitleDisplayMode(.inline)
                 .toolbar(content: {
-                    ToolbarItem() {
+                    ToolbarItem(placement: .principal) {
                         HStack {
                             Image(viewModel.CategoryIcon)
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 40, height: 40)
-                                .onTapGesture {
-                                    viewModel.PlayCategorySound()
-                                }
-                            Button {
+                            Text(viewModel.title)
+                                .fontWeight(.black)
+                            Button(action: {
                                 viewModel.GenerateRandomNews()
-                            } label: {
+                            }) {
                                 Image(systemName: "dice")
                             }
                         }
-                   }
-             })
+                    }
+                })
+                .onAppear {
+                    UITabBar.showTabBar(animated: true)
+             }
         }
     }
 }
