@@ -33,6 +33,12 @@ struct NewsTabView: View {
                     Image(systemName: "magnifyingglass")
                     Text("поиск")
                 }
+        
+            SettingsListView()
+                .tabItem {
+                    Image(systemName: "gear")
+                    Text("настройки")
+                }
         }.accentColor(.black)
     }
 }
