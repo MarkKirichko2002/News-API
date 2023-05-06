@@ -22,11 +22,11 @@ class RandomNewsListViewViewModel: ObservableObject {
         let category = randomManager.ReturnRandomElement(array: Categories.categories) as! NewsCategoryModel
         title = category.name
         player.PlaySound(resource: category.sound)
-        newsService.execute(with: News.self, category: category.endpoint) { result in
+        newsService.execute(with: News.self, category: category.endpoint) { [weak self] result in
             switch result {
             case .success(let data):
                 guard let news = data.articles else {return}
-                self.news = news
+                self?.news = news
             case .failure(let error):
                 print(error)
             }
