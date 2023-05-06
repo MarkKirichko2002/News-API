@@ -15,14 +15,10 @@ struct SearchNewsListView: View {
     var body: some View {
         NavigationView {
             ArticlesListView(news: viewModel.SearchNews())
-                .navigationBarTitle(viewModel.title)
                 .navigationBarTitleDisplayMode(.inline)
                 .searchable(text: $viewModel.searchText, prompt: "Поиск новостей")
-                .onAppear {
-                    UITabBar.showTabBar(animated: true)
-                }
                 .toolbar(content: {
-                    ToolbarItem() {
+                    ToolbarItem(placement: .principal) {
                         HStack {
                             Image(viewModel.CategoryIcon)
                                 .resizable()
@@ -31,6 +27,9 @@ struct SearchNewsListView: View {
                                 .onTapGesture {
                                     viewModel.PlayCategorySound()
                                 }
+                            Text(viewModel.title)
+                                .fontWeight(.black)
+//                            Spacer()
                             Button {
                                 viewModel.RecognizeNewsCategories()
                             } label: {
@@ -39,6 +38,9 @@ struct SearchNewsListView: View {
                         }
                    }
              })
+                .onAppear {
+                    UITabBar.showTabBar(animated: true)
+                }
         }
     }
 }

@@ -20,7 +20,20 @@ struct NewsCategoriesListView: View {
                 } label: {
                     NewsCategoryCell(category: category)
                 }
-            }.navigationBarTitle("Категории")
+            }
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar(content: {
+                ToolbarItem(placement: .principal) {
+                    HStack {
+                        Image("news")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 40, height: 40)
+                        Text("Категории")
+                            .fontWeight(.black)
+                    }
+                }
+            })
             .onAppear {
                 UITabBar.showTabBar(animated: true)
             }
