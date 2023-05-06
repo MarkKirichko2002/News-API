@@ -13,6 +13,8 @@ class SearchNewsListViewViewModel: ObservableObject {
     @Published var filteredNews = [Article]()
     @Published var searchText = ""
     @Published var ButtonImage = "mic"
+    @Published var CategoryIcon = "news"
+    @Published var CategorySound = "newspaper.mp3"
     @Published var isRecognizing = false
     @Published var title = "Поиск"
     @Published var selectedNewsCategory = Categories.categories[0]
@@ -71,6 +73,8 @@ class SearchNewsListViewViewModel: ObservableObject {
         for category in Categories.categories {
             if text.lowercased().contains(category.voiceCommand) {
                 GetNews(category: category)
+                CategoryIcon = category.icon
+                CategorySound = category.sound
                 ButtonImage = "mic"
             }
         }
@@ -88,5 +92,10 @@ class SearchNewsListViewViewModel: ObservableObject {
         } else {
             return news.filter { $0.title.localizedCaseInsensitiveContains(searchText) }
         }
+    }
+    
+    // MARK: - воспроизведение аудио
+    func PlayCategorySound() {
+        player.PlaySound(resource: CategorySound)
     }
 }

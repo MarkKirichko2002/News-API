@@ -19,6 +19,16 @@ struct TopNewsListView: View {
             .onAppear {
                 UITabBar.showTabBar(animated: true)
             }
+            .toolbar(content: {
+                ToolbarItem() {
+                    HStack {
+                        Image("top news")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 40, height: 40)
+                    }
+               }
+           })
         }
     }
 }

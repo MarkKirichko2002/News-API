@@ -22,6 +22,13 @@ struct RandomNewsListView: View {
                 .toolbar(content: {
                     ToolbarItem() {
                         HStack {
+                            Image(viewModel.CategoryIcon)
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 40, height: 40)
+                                .onTapGesture {
+                                    viewModel.PlayCategorySound()
+                                }
                             Button {
                                 viewModel.GenerateRandomNews()
                             } label: {
