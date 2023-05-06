@@ -44,6 +44,7 @@
 		82D8466028839CDE00C766CD /* NewsCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D8465E28839CDD00C766CD /* NewsCategoryModel.swift */; };
 		82D8466128839CDE00C766CD /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D8465F28839CDD00C766CD /* Article.swift */; };
 		82D846932883C49300C766CD /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D846922883C49300C766CD /* WebView.swift */; };
+		82DC3A732A06D35A000D66E5 /* science.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 82DC3A722A06D359000D66E5 /* science.mp3 */; };
 		9B80D11DDBAA294DDE39B500 /* Pods_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CED56429CEC800AEDC4FEEE /* Pods_News.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,7 @@
 		82D8465F28839CDD00C766CD /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		82D846922883C49300C766CD /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		82D846942883C58400C766CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = News/sources/app/Info.plist; sourceTree = SOURCE_ROOT; };
+		82DC3A722A06D359000D66E5 /* science.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = science.mp3; sourceTree = "<group>"; };
 		B56764FAE09A66810075B858 /* Pods-News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.release.xcconfig"; path = "Target Support Files/Pods-News/Pods-News.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -411,6 +413,7 @@
 				820799B32A05852A0055C85F /* sport.wav */,
 				820799B22A05852A0055C85F /* business.mp3 */,
 				820799AE2A05852A0055C85F /* entertainment.mp3 */,
+				82DC3A722A06D359000D66E5 /* science.mp3 */,
 				820799B02A05852A0055C85F /* dice.wav */,
 			);
 			path = sounds;
@@ -494,6 +497,7 @@
 				820799B62A05852A0055C85F /* dice.wav in Resources */,
 				820799B52A05852A0055C85F /* newspaper.mp3 in Resources */,
 				82D8465328839C8200C766CD /* Preview Assets.xcassets in Resources */,
+				82DC3A732A06D35A000D66E5 /* science.mp3 in Resources */,
 				820799B42A05852A0055C85F /* entertainment.mp3 in Resources */,
 				820799B92A05852A0055C85F /* sport.wav in Resources */,
 				82D8465028839C8200C766CD /* Assets.xcassets in Resources */,

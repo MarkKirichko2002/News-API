@@ -14,11 +14,11 @@ class CurrentCategoryNewsListViewViewModel: ObservableObject {
     private let player = AudioPlayer()
         
     func GetCurrentCategoryNews(endpoint: NewsCategory) {
-        newsService.execute(with: News.self, category: endpoint) { result in
+        newsService.execute(with: News.self, category: endpoint) { [weak self] result in
             switch result {
             case .success(let data):
                 guard let news = data.articles else {return}
-                self.news = news
+                self?.news = news
             case .failure(let error):
                 print(error)
             }

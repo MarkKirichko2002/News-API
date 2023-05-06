@@ -53,13 +53,13 @@ class SearchNewsListViewViewModel: ObservableObject {
     
     // MARK: - API запросы
     func GetNews(category: NewsCategoryModel) {
-        newsService.execute(with: News.self, category: category.endpoint) { result in
+        newsService.execute(with: News.self, category: category.endpoint) { [weak self] result in
             switch result {
             case .success(let data):
                 guard let news = data.articles else {return}
-                self.news = news
-                self.title = "\(category.name): \(news.count)"
-                self.player.PlaySound(resource: category.sound)
+                self?.news = news
+                self?.title = "\(category.name): \(news.count)"
+                self?.player.PlaySound(resource: category.sound)
             case .failure(let error):
                 print(error)
             }
@@ -69,7 +69,7 @@ class SearchNewsListViewViewModel: ObservableObject {
     // MARK: - поиск новостей
     private func GetSearchNews(text: String) {
         for category in Categories.categories {
-            if text.lowercased().contains(category.name) {
+            if text.lowercased().contains(category.voiceCommand) {
                 GetNews(category: category)
                 ButtonImage = "mic"
             }
