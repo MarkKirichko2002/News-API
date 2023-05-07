@@ -10,12 +10,13 @@ import SwiftUI
 struct NewsCategoryCell: View {
     
     var category: NewsCategoryModel
+    private let player = AudioPlayer()
     
     var body: some View {
         HStack(spacing: 15) {
-            Image(category.icon)
-                .resizable()
-                .frame(width: 80, height: 80)
+            SpringImageView(image: category.icon, width: 80, height: 80) {
+                player.PlaySound(resource: category.sound)
+            }
             VStack(alignment: .leading, spacing: 10) {
                 Text(category.name)
                     .fontWeight(.black)

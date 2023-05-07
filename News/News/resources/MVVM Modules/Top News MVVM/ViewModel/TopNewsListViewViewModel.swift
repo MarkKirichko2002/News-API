@@ -10,7 +10,9 @@ import Foundation
 class TopNewsListViewViewModel: ObservableObject {
     
     @Published var news = [Article]()
+    // MARK: - сервисы
     private let newsService = NewsService()
+    private let player = AudioPlayer()
     
     init() {
         GetTopNews()
@@ -26,5 +28,9 @@ class TopNewsListViewViewModel: ObservableObject {
                 print(error)
             }
         }
+    }
+    
+    func PlaySound() {
+        player.PlaySound(resource: "newspaper.mp3")
     }
 }

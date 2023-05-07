@@ -10,6 +10,7 @@ import Foundation
 class CurrentCategoryNewsListViewViewModel: ObservableObject {
     
     @Published var news = [Article]()
+    // MARK: - сервисы
     private let newsService = NewsService()
     private let player = AudioPlayer()
         

@@ -19,10 +19,9 @@ struct RandomNewsListView: View {
                 .toolbar(content: {
                     ToolbarItem(placement: .principal) {
                         HStack {
-                            Image(viewModel.CategoryIcon)
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 40, height: 40)
+                            SpringImageView(image: viewModel.CategoryIcon, width: 40, height: 40) {
+                                viewModel.PlayCategorySound()
+                            }
                             Text(viewModel.title)
                                 .fontWeight(.black)
                             Button(action: {

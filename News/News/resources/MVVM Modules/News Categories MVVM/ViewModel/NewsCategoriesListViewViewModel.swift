@@ -10,7 +10,9 @@ import Foundation
 class NewsCategoriesListViewViewModel: ObservableObject {
     
     @Published var categories = Categories.categories
+    // MARK: - сервисы
     private let newsService = NewsService()
+    private let player = AudioPlayer()
     
     init() {
         GetNewsCategoriesInfo()
@@ -28,5 +30,9 @@ class NewsCategoriesListViewViewModel: ObservableObject {
                 }
             }
         }
+    }
+    
+    func PlaySound() {
+        player.PlaySound(resource: "newspaper.mp3")
     }
 }
