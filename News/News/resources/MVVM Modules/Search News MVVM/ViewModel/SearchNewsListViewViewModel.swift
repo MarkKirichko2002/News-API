@@ -60,6 +60,7 @@ class SearchNewsListViewViewModel: ObservableObject {
             case .success(let data):
                 guard let news = data.articles else {return}
                 self?.news = news
+                self?.CategoryIcon = category.icon
                 self?.title = "\(category.name): \(news.count)"
                 self?.player.PlaySound(resource: category.sound)
             case .failure(let error):
@@ -72,9 +73,8 @@ class SearchNewsListViewViewModel: ObservableObject {
     private func GetSearchNews(text: String) {
         for category in Categories.categories {
             if text.lowercased().contains(category.voiceCommand) {
+                selectedNewsCategory = category
                 GetNews(category: category)
-                CategoryIcon = category.icon
-                CategorySound = category.sound
                 ButtonImage = "mic"
             }
         }
