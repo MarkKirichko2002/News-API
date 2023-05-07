@@ -63,8 +63,10 @@ class SearchNewsListViewViewModel: ObservableObject {
                 self?.CategoryIcon = category.icon
                 self?.title = "\(category.name): \(news.count)"
                 self?.player.PlaySound(resource: category.sound)
+                self?.CategorySound = category.sound
             case .failure(let error):
                 print(error)
+                self?.title = "Ошибка"
             }
         }
     }

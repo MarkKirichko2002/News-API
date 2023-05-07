@@ -11,7 +11,7 @@ import HidableTabView
 struct SearchNewsListView: View {
     
     @ObservedObject var viewModel = SearchNewsListViewViewModel()
-
+    
     var body: some View {
         NavigationView {
             ArticlesListView(news: viewModel.SearchNews())
@@ -22,13 +22,9 @@ struct SearchNewsListView: View {
                         HStack {
                             Spacer()
                             // иконка
-                            Image(viewModel.CategoryIcon)
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 40, height: 40)
-                                .onTapGesture {
-                                    viewModel.PlayCategorySound()
-                                }
+                            SpringImageView(image: viewModel.CategoryIcon, width: 40, height: 40) {
+                                viewModel.PlayCategorySound()
+                            }
                             // название категории
                             Text(viewModel.title)
                                 .fontWeight(.black)

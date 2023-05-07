@@ -19,10 +19,9 @@ struct TopNewsListView: View {
             .toolbar(content: {
                 ToolbarItem(placement: .principal) {
                     HStack {
-                        Image("top news")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 40, height: 40)
+                        SpringImageView(image: "top news", width: 40, height: 40) {
+                            viewModel.PlaySound()
+                        }
                         Text("Главное")
                             .fontWeight(.black)
                     }
