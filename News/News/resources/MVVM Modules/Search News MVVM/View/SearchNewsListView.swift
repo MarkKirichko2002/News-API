@@ -22,7 +22,7 @@ struct SearchNewsListView: View {
                         HStack {
                             Spacer()
                             // иконка
-                            SpringImageView(image: viewModel.CategoryIcon, width: 40, height: 40) {
+                            SpringImageView(image: viewModel.CategoryIcon, width: 30, height: 30) {
                                 viewModel.PlayCategorySound()
                             }
                             // название категории

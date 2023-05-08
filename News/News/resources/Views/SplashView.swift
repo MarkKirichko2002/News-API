@@ -18,12 +18,10 @@ struct SplashView: View {
            } else {
                VStack {
                    VStack {
-                       Image("news")
+                       Image(systemName: "newspaper")
                            .resizable()
                            .aspectRatio(contentMode: .fill)
                            .frame(width: 80, height: 80)
-                           .clipShape(Circle())
-                           .overlay(Circle().stroke(Color.black, lineWidth: 4))
                        Text("Новости 2023")
                            .fontWeight(.black)
                            .foregroundColor(.black.opacity(0.80))

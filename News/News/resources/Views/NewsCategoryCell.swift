@@ -14,7 +14,7 @@ struct NewsCategoryCell: View {
     
     var body: some View {
         HStack(spacing: 15) {
-            SpringImageView(image: category.icon, width: 80, height: 80) {
+            SpringImageView(image: category.icon, width: 60, height: 60) {
                 player.PlaySound(resource: category.sound)
             }
             VStack(alignment: .leading, spacing: 10) {
