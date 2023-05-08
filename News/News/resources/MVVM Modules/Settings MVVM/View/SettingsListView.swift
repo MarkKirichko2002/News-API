@@ -20,10 +20,9 @@ struct SettingsListView: View {
                 .toolbar(content: {
                     ToolbarItem(placement: .principal) {
                         HStack {
-                            Image("settings")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 40, height: 40)
+                            SpringImageView(image: "gear", width: 30, height: 30) {
+                                
+                            }
                             Text("Настройки")
                                 .fontWeight(.black)
                         }
