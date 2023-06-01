@@ -18,7 +18,7 @@ struct SplashView: View {
            } else {
                VStack {
                    VStack {
-                       Image(systemName: "newspaper")
+                       Image("newspaper")
                            .resizable()
                            .aspectRatio(contentMode: .fill)
                            .frame(width: 80, height: 80)

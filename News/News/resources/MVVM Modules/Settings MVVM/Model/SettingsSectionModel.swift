@@ -2,13 +2,13 @@
 //  SettingsSectionModel.swift
 //  News
 //
-//  Created by Марк Киричко on 07.05.2023.
+//  Created by Марк Киричко on 01.06.2023.
 //
 
 import Foundation
 
 struct SettingsSectionModel: Identifiable {
-    var id = UUID()
-    let sectionName: String
-    let settings: [SettingsModel]
+    var id: Int
+    var name: String
+    var settings: [SettingsModel]
 }

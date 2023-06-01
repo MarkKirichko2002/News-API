@@ -19,7 +19,7 @@ struct CurrentCategoryNewsListView: View {
         .toolbar(content: {
             ToolbarItem(placement: .principal) {
                 HStack {
-                    SpringImageView(image: category.icon, width: 30, height: 30) {
+                    SpringImageView(image: category.icon, width: 35, height: 35) {
                         viewModel.PlayCurrentNewsCategorySound(sound: category.sound)
                     }
                     Text(category.name)

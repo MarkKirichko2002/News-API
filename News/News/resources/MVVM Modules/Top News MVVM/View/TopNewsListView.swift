@@ -19,7 +19,7 @@ struct TopNewsListView: View {
             .toolbar(content: {
                 ToolbarItem(placement: .principal) {
                     HStack {
-                        SpringImageView(image: "flame", width: 30, height: 30) {
+                        SpringImageView(image: "fire", width: 35, height: 35) {
                             viewModel.PlaySound()
                         }
                         Text("Главное")
