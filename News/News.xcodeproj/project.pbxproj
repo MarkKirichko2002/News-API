@@ -36,6 +36,7 @@
 		82079A012A05CBD80055C85F /* RandomNewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82079A002A05CBD80055C85F /* RandomNewsListView.swift */; };
 		823CBF4B28903AEC0065F33E /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CBF4A28903AEC0065F33E /* SplashView.swift */; };
 		82490F512A08155700C9A6CF /* SpringImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82490F502A08155700C9A6CF /* SpringImageView.swift */; };
+		826263192A27F429003C9E98 /* SettingsSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826263182A27F429003C9E98 /* SettingsSectionModel.swift */; };
 		8284C917288C1F0B00AF71EB /* SearchNewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284C914288C1F0B00AF71EB /* SearchNewsListView.swift */; };
 		82C2A847288EE40400CD18E2 /* HidableTabView in Frameworks */ = {isa = PBXBuildFile; productRef = 82C2A846288EE40400CD18E2 /* HidableTabView */; };
 		82D8464C28839C8000C766CD /* NewsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D8464B28839C8000C766CD /* NewsApp.swift */; };
@@ -49,7 +50,6 @@
 		82E7AB662A070C5D00452798 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E7AB652A070C5D00452798 /* SettingsModel.swift */; };
 		82E7AB682A070C9500452798 /* SettingsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E7AB672A070C9500452798 /* SettingsListView.swift */; };
 		82E7AB6A2A070C9F00452798 /* SettingsListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E7AB692A070C9F00452798 /* SettingsListViewViewModel.swift */; };
-		82E7AB6C2A070FC900452798 /* SettingsSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E7AB6B2A070FC900452798 /* SettingsSectionModel.swift */; };
 		9B80D11DDBAA294DDE39B500 /* Pods_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CED56429CEC800AEDC4FEEE /* Pods_News.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +85,7 @@
 		82079A002A05CBD80055C85F /* RandomNewsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNewsListView.swift; sourceTree = "<group>"; };
 		823CBF4A28903AEC0065F33E /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		82490F502A08155700C9A6CF /* SpringImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringImageView.swift; sourceTree = "<group>"; };
+		826263182A27F429003C9E98 /* SettingsSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSectionModel.swift; sourceTree = "<group>"; };
 		8284C914288C1F0B00AF71EB /* SearchNewsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchNewsListView.swift; sourceTree = "<group>"; };
 		82D8464828839C8000C766CD /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D8464B28839C8000C766CD /* NewsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApp.swift; sourceTree = "<group>"; };
@@ -99,7 +100,6 @@
 		82E7AB652A070C5D00452798 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		82E7AB672A070C9500452798 /* SettingsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListView.swift; sourceTree = "<group>"; };
 		82E7AB692A070C9F00452798 /* SettingsListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListViewViewModel.swift; sourceTree = "<group>"; };
-		82E7AB6B2A070FC900452798 /* SettingsSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSectionModel.swift; sourceTree = "<group>"; };
 		B56764FAE09A66810075B858 /* Pods-News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.release.xcconfig"; path = "Target Support Files/Pods-News/Pods-News.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -446,7 +446,7 @@
 		82E7AB642A070C4B00452798 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				82E7AB6B2A070FC900452798 /* SettingsSectionModel.swift */,
+				826263182A27F429003C9E98 /* SettingsSectionModel.swift */,
 				82E7AB652A070C5D00452798 /* SettingsModel.swift */,
 			);
 			path = Model;
@@ -613,7 +613,6 @@
 				820799CC2A0588000055C85F /* NewsCategory.swift in Sources */,
 				823CBF4B28903AEC0065F33E /* SplashView.swift in Sources */,
 				820799E72A05982E0055C85F /* RoundedImageView.swift in Sources */,
-				82E7AB6C2A070FC900452798 /* SettingsSectionModel.swift in Sources */,
 				820799E32A0595110055C85F /* AudioPlayer.swift in Sources */,
 				820799CA2A0587470055C85F /* TopNewsListViewViewModel.swift in Sources */,
 				82079A012A05CBD80055C85F /* RandomNewsListView.swift in Sources */,
@@ -633,6 +632,7 @@
 				82E7AB662A070C5D00452798 /* SettingsModel.swift in Sources */,
 				820799F82A05BD3B0055C85F /* News.swift in Sources */,
 				820799FF2A05CB0F0055C85F /* RandomNewsListViewViewModel.swift in Sources */,
+				826263192A27F429003C9E98 /* SettingsSectionModel.swift in Sources */,
 				82D846932883C49300C766CD /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -758,8 +758,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3B91602091C3805AB88BF365 /* Pods-News.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "AppIcon 8 AppIcon 7 AppIcon 6 AppIcon 5 AppIcon 4 AppIcon 3 AppIcon 2 AppIcon 1";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"News/sources/app/Preview Content\"";
@@ -793,8 +795,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B56764FAE09A66810075B858 /* Pods-News.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "AppIcon 8 AppIcon 7 AppIcon 6 AppIcon 5 AppIcon 4 AppIcon 3 AppIcon 2 AppIcon 1";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"News/sources/app/Preview Content\"";

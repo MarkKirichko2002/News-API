@@ -17,7 +17,7 @@ struct SpringImageView: View {
     var onTap: ()->Void
     
     var body: some View {
-        Image(systemName: image)
+        Image(image)
             .resizable()
             .aspectRatio(contentMode: .fill)
             .frame(width: width, height: height)

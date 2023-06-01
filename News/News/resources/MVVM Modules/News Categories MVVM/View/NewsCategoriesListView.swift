@@ -25,7 +25,7 @@ struct NewsCategoriesListView: View {
             .toolbar(content: {
                 ToolbarItem(placement: .principal) {
                     HStack {
-                        SpringImageView(image: "newspaper", width: 30, height: 30) {
+                        SpringImageView(image: "newspaper", width: 35, height: 35) {
                             viewModel.PlaySound()
                         }
                         Text("Категории")
