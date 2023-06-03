@@ -11,4 +11,5 @@ struct SettingsModel: Identifiable {
     let id: Int
     let name: String
     let icon: String
+    let AppIcon: String
 }

@@ -17,21 +17,21 @@ struct SettingsListView: View {
         NavigationView {
             List(viewModel.settings) { section in
                 Section(section.name) {
-                    ForEach(section.settings) { setting in
-                        HStack {
-                            SpringImageView(image: setting.icon, width: 80, height: 80) {
-                                
+                    Picker("Выберите иконку приложения", selection: $activeAppIcon) {
+                        ForEach(section.settings, id: \.AppIcon) { value in
+                            HStack {
+                                SpringImageView(image: value.icon, width: 50, height: 50) {}
+                                Text(value.name)
+                                    .fontWeight(.black)
+                                //Text(value.AppIcon)
                             }
-                            Text(setting.name)
-                        }.onTapGesture {
-                            activeAppIcon = customIcons[setting.id - 1]
                         }
-                    }
+                    }.pickerStyle(.inline)
+                        .onChange(of: activeAppIcon) { newValue in
+                            print(newValue)
+                            UIApplication.shared.setAlternateIconName(newValue)
+                     }
                 }
-            }
-            .onChange(of: activeAppIcon) { newValue in
-                print(newValue)
-                UIApplication.shared.setAlternateIconName(newValue)
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar(content: {
