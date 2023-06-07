@@ -9,28 +9,34 @@ import SwiftUI
 
 struct SettingsListView: View {
     
-    @AppStorage("active_icon") var activeAppIcon: String = "AppIcon 1"
-    var viewModel = SettingsListViewViewModel()
-    var customIcons = ["AppIcon 1", "AppIcon 2", "AppIcon 3", "AppIcon 4", "AppIcon 5", "AppIcon 6", "AppIcon 7", "AppIcon 8"]
+    @StateObject var viewModel = SettingsListViewViewModel()
     
     var body: some View {
         NavigationView {
             List(viewModel.settings) { section in
                 Section(section.name) {
-                    Picker("Выберите иконку приложения", selection: $activeAppIcon) {
+                    Picker("Выберите иконку приложения", selection: $viewModel.activeAppIcon) {
                         ForEach(section.settings, id: \.AppIcon) { value in
                             HStack {
                                 SpringImageView(image: value.icon, width: 50, height: 50) {}
                                 Text(value.name)
                                     .fontWeight(.black)
-                                //Text(value.AppIcon)
                             }
                         }
                     }.pickerStyle(.inline)
-                        .onChange(of: activeAppIcon) { newValue in
+                        .onChange(of: viewModel.activeAppIcon) { newValue in
                             print(newValue)
                             UIApplication.shared.setAlternateIconName(newValue)
                      }
+                }
+                Section("интерактивность") {
+                    HStack {
+                        SpringImageView(image: "newspaper", width: 50, height: 50) {}
+                        Text(viewModel.isInteractiveOn ? "вкл" : "выкл")
+                            .foregroundColor(viewModel.isInteractiveOn ? .green : .gray)
+                            .fontWeight(.black)
+                        Toggle("", isOn: $viewModel.isInteractiveOn)
+                    }
                 }
             }
             .navigationBarTitleDisplayMode(.inline)

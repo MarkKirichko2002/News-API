@@ -5,9 +5,12 @@
 //  Created by Марк Киричко on 07.05.2023.
 //
 
-import UIKit
+import SwiftUI
 
-class SettingsListViewViewModel {
+class SettingsListViewViewModel: ObservableObject {
+    
+    @AppStorage("isInteractiveOn") var isInteractiveOn = false
+    @AppStorage("active_icon") var activeAppIcon: String = "AppIcon 1"
     
     var settings = [
         SettingsSectionModel(id: 1, name: "Иконка", settings: [

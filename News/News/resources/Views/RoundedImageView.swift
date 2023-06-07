@@ -21,6 +21,7 @@ struct RoundedImageView: View {
     var isURL: Bool
     
     private let player = AudioPlayer()
+    @AppStorage("isInteractiveOn") var isInteractiveOn = false
     
     var body: some View {
         if isURL {
@@ -30,15 +31,17 @@ struct RoundedImageView: View {
                 .frame(width: width, height: height)
                 .clipShape(Circle())
                 .overlay(Circle().stroke(color, lineWidth: lineWidth))
-                // MARK: - пружинная анимация
+            // MARK: - пружинная анимация
                 .scaleEffect(isAnimation ? 1.1 : 1, anchor: .bottom)
                 .animation(.interpolatingSpring(stiffness: 170, damping: 8).delay(0.4), value: isAnimation)
                 .onTapGesture {
-                    isAnimation.toggle()
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                        self.isAnimation = false
+                    if isInteractiveOn {
+                        isAnimation.toggle()
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                            self.isAnimation = false
+                        }
+                        player.PlaySound(resource: sound)
                     }
-                    player.PlaySound(resource: sound)
                 }
         } else {
             SpringImageView(image: image, width: width, height: height) {

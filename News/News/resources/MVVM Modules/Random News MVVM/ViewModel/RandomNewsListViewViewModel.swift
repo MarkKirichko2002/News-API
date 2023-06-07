@@ -5,7 +5,7 @@
 //  Created by Марк Киричко on 06.05.2023.
 //
 
-import Foundation
+import SwiftUI
 
 class RandomNewsListViewViewModel: ObservableObject {
     
@@ -13,6 +13,7 @@ class RandomNewsListViewViewModel: ObservableObject {
     @Published var title = "Рандом"
     @Published var CategoryIcon = "random"
     @Published var CategorySound = ""
+    @AppStorage("isInteractiveOn") var isInteractiveOn = false
     
     // MARK: - сервисы
     private let randomManager = RandomManager()
@@ -23,7 +24,11 @@ class RandomNewsListViewViewModel: ObservableObject {
     func GenerateRandomNews() {
         let category = randomManager.ReturnRandomElement(array: Categories.categories) as! NewsCategoryModel
         title = category.name
-        player.PlaySound(resource: category.sound)
+        if isInteractiveOn {
+            player.PlaySound(resource: category.sound)
+        } else {
+            print(isInteractiveOn)
+        }
         CategoryIcon = category.icon
         CategorySound = category.sound
         newsService.execute(with: News.self, category: category.endpoint) { [weak self] result in
