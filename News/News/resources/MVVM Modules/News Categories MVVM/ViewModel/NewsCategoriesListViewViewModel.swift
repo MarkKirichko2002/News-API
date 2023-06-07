@@ -24,7 +24,9 @@ class NewsCategoriesListViewViewModel: ObservableObject {
                 switch result {
                 case .success(let data):
                     guard let news = data.articles?.count else {return}
-                    self?.categories[category.id - 1].articlesCount = news
+                    DispatchQueue.main.async {
+                        self?.categories[category.id - 1].articlesCount = news
+                    }
                 case .failure(let error):
                     print(error)
                 }

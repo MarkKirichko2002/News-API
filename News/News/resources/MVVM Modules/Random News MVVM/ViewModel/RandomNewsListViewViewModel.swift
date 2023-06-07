@@ -14,6 +14,7 @@ class RandomNewsListViewViewModel: ObservableObject {
     @Published var CategoryIcon = "random"
     @Published var CategorySound = ""
     @AppStorage("isInteractiveOn") var isInteractiveOn = false
+    @AppStorage("isShakeToGenerateOn") var isShakeToGenerateOn = false
     
     // MARK: - сервисы
     private let randomManager = RandomManager()

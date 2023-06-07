@@ -37,6 +37,8 @@
 		823CBF4B28903AEC0065F33E /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CBF4A28903AEC0065F33E /* SplashView.swift */; };
 		82490F512A08155700C9A6CF /* SpringImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82490F502A08155700C9A6CF /* SpringImageView.swift */; };
 		826263192A27F429003C9E98 /* SettingsSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826263182A27F429003C9E98 /* SettingsSectionModel.swift */; };
+		82808E792A310C8000DEEB16 /* InteractiveOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82808E782A310C8000DEEB16 /* InteractiveOptionCell.swift */; };
+		82808E7B2A310D6F00DEEB16 /* ShakeToGenerateOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82808E7A2A310D6F00DEEB16 /* ShakeToGenerateOptionCell.swift */; };
 		8284C917288C1F0B00AF71EB /* SearchNewsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284C914288C1F0B00AF71EB /* SearchNewsListView.swift */; };
 		82C2A847288EE40400CD18E2 /* HidableTabView in Frameworks */ = {isa = PBXBuildFile; productRef = 82C2A846288EE40400CD18E2 /* HidableTabView */; };
 		82D8464C28839C8000C766CD /* NewsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D8464B28839C8000C766CD /* NewsApp.swift */; };
@@ -87,6 +89,8 @@
 		823CBF4A28903AEC0065F33E /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		82490F502A08155700C9A6CF /* SpringImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringImageView.swift; sourceTree = "<group>"; };
 		826263182A27F429003C9E98 /* SettingsSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSectionModel.swift; sourceTree = "<group>"; };
+		82808E782A310C8000DEEB16 /* InteractiveOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveOptionCell.swift; sourceTree = "<group>"; };
+		82808E7A2A310D6F00DEEB16 /* ShakeToGenerateOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeToGenerateOptionCell.swift; sourceTree = "<group>"; };
 		8284C914288C1F0B00AF71EB /* SearchNewsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchNewsListView.swift; sourceTree = "<group>"; };
 		82D8464828839C8000C766CD /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D8464B28839C8000C766CD /* NewsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApp.swift; sourceTree = "<group>"; };
@@ -369,6 +373,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		82808E762A310C3E00DEEB16 /* Settings View */ = {
+			isa = PBXGroup;
+			children = (
+				82E7AB672A070C9500452798 /* SettingsListView.swift */,
+			);
+			path = "Settings View";
+			sourceTree = "<group>";
+		};
+		82808E772A310C4700DEEB16 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				82808E782A310C8000DEEB16 /* InteractiveOptionCell.swift */,
+				82808E7A2A310D6F00DEEB16 /* ShakeToGenerateOptionCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		82D8463F28839C8000C766CD = {
 			isa = PBXGroup;
 			children = (
@@ -441,7 +462,8 @@
 		82E7AB632A070C4900452798 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				82E7AB672A070C9500452798 /* SettingsListView.swift */,
+				82808E762A310C3E00DEEB16 /* Settings View */,
+				82808E772A310C4700DEEB16 /* Cells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -617,8 +639,10 @@
 				820799CF2A058B690055C85F /* ArticlesListView.swift in Sources */,
 				82E7AB6A2A070C9F00452798 /* SettingsListViewViewModel.swift in Sources */,
 				82D8466128839CDE00C766CD /* Article.swift in Sources */,
+				82808E7B2A310D6F00DEEB16 /* ShakeToGenerateOptionCell.swift in Sources */,
 				820799EA2A059FDA0055C85F /* SpeechRecognitionManager.swift in Sources */,
 				8284C917288C1F0B00AF71EB /* SearchNewsListView.swift in Sources */,
+				82808E792A310C8000DEEB16 /* InteractiveOptionCell.swift in Sources */,
 				820799E02A05936C0055C85F /* CurrentCategoryNewsListView.swift in Sources */,
 				82D8464E28839C8000C766CD /* NewsTabView.swift in Sources */,
 				820799CC2A0588000055C85F /* NewsCategory.swift in Sources */,
