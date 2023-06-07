@@ -10,7 +10,6 @@ import SwiftUI
 class SearchNewsListViewViewModel: ObservableObject {
     
     @Published var news = [Article]()
-    @Published var filteredNews = [Article]()
     @Published var searchText = ""
     @Published var ButtonImage = "mic"
     @Published var CategoryIcon = "news"
@@ -60,15 +59,17 @@ class SearchNewsListViewViewModel: ObservableObject {
             switch result {
             case .success(let data):
                 guard let news = data.articles else {return}
-                self?.news = news
-                self?.CategoryIcon = category.icon
-                self?.title = "\(category.name): \(news.count)"
-                if self?.isInteractiveOn ?? false {
-                    self?.player.PlaySound(resource: category.sound)
-                } else {
-                    print(self?.isInteractiveOn)
+                DispatchQueue.main.async {
+                    self?.news = news
+                    self?.CategoryIcon = category.icon
+                    self?.title = "\(category.name): \(news.count)"
+                    if self?.isInteractiveOn ?? false {
+                        self?.player.PlaySound(resource: category.sound)
+                    } else {
+                        print(self?.isInteractiveOn)
+                    }
+                    self?.CategorySound = category.sound
                 }
-                self?.CategorySound = category.sound
             case .failure(let error):
                 print(error)
                 self?.title = "Ошибка"

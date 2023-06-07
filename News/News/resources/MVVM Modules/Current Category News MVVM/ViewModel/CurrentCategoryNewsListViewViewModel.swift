@@ -21,7 +21,9 @@ class CurrentCategoryNewsListViewViewModel: ObservableObject {
             switch result {
             case .success(let data):
                 guard let news = data.articles else {return}
-                self?.news = news
+                DispatchQueue.main.async {
+                    self?.news = news
+                }
             case .failure(let error):
                 print(error)
             }

@@ -24,10 +24,14 @@ struct RandomNewsListView: View {
                             }
                             Text(viewModel.title)
                                 .fontWeight(.black)
+                            Spacer()
                             Button(action: {
                                 viewModel.GenerateRandomNews()
                             }) {
-                                Image(systemName: "dice")
+                                Image("dice")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 35, height: 35)
                             }
                         }
                     }
@@ -36,9 +40,11 @@ struct RandomNewsListView: View {
                     UITabBar.showTabBar(animated: true)
                 }
                 .onShake {
-                    viewModel.GenerateRandomNews()
-                }
-          }
+                    if viewModel.isShakeToGenerateOn {
+                        viewModel.GenerateRandomNews()
+                    } else {}
+              }
+         }
     }
 }
 

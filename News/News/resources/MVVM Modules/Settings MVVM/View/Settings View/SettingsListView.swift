@@ -14,7 +14,7 @@ struct SettingsListView: View {
     var body: some View {
         NavigationView {
             List(viewModel.settings) { section in
-                Section(section.name) {
+                Section(header: Text(section.name).foregroundColor(.black).fontWeight(.bold)) {
                     Picker("Выберите иконку приложения", selection: $viewModel.activeAppIcon) {
                         ForEach(section.settings, id: \.AppIcon) { value in
                             HStack {
@@ -29,14 +29,12 @@ struct SettingsListView: View {
                             UIApplication.shared.setAlternateIconName(newValue)
                      }
                 }
-                Section("интерактивность") {
-                    HStack {
-                        SpringImageView(image: "newspaper", width: 50, height: 50) {}
-                        Text(viewModel.isInteractiveOn ? "вкл" : "выкл")
-                            .foregroundColor(viewModel.isInteractiveOn ? .green : .gray)
-                            .fontWeight(.black)
-                        Toggle("", isOn: $viewModel.isInteractiveOn)
-                    }
+                Section(header: Text("интерактивность").foregroundColor(.black).fontWeight(.bold)) {
+                    InteractiveOptionCell(isInteractiveOn: $viewModel.isInteractiveOn)
+                }
+                
+                Section(header: Text("встряхните чтобы сгенерировать").foregroundColor(.black).fontWeight(.bold)) {
+                    ShakeToGenerateOptionCell(isShakeToGenerateOn: $viewModel.isShakeToGenerateOn)
                 }
             }
             .navigationBarTitleDisplayMode(.inline)

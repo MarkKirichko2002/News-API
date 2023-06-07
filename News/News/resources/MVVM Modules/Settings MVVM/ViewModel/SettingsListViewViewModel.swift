@@ -9,8 +9,9 @@ import SwiftUI
 
 class SettingsListViewViewModel: ObservableObject {
     
-    @AppStorage("isInteractiveOn") var isInteractiveOn = false
     @AppStorage("active_icon") var activeAppIcon: String = "AppIcon 1"
+    @AppStorage("isInteractiveOn") var isInteractiveOn = false
+    @AppStorage("isShakeToGenerateOn") var isShakeToGenerateOn = false
     
     var settings = [
         SettingsSectionModel(id: 1, name: "Иконка", settings: [
