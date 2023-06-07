@@ -50,6 +50,7 @@
 		82E7AB662A070C5D00452798 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E7AB652A070C5D00452798 /* SettingsModel.swift */; };
 		82E7AB682A070C9500452798 /* SettingsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E7AB672A070C9500452798 /* SettingsListView.swift */; };
 		82E7AB6A2A070C9F00452798 /* SettingsListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E7AB692A070C9F00452798 /* SettingsListViewViewModel.swift */; };
+		82F5E7392A30FC5300469F65 /* View + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F5E7382A30FC5300469F65 /* View + Extensions.swift */; };
 		9B80D11DDBAA294DDE39B500 /* Pods_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CED56429CEC800AEDC4FEEE /* Pods_News.framework */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +101,7 @@
 		82E7AB652A070C5D00452798 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		82E7AB672A070C9500452798 /* SettingsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListView.swift; sourceTree = "<group>"; };
 		82E7AB692A070C9F00452798 /* SettingsListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListViewViewModel.swift; sourceTree = "<group>"; };
+		82F5E7382A30FC5300469F65 /* View + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Extensions.swift"; sourceTree = "<group>"; };
 		B56764FAE09A66810075B858 /* Pods-News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.release.xcconfig"; path = "Target Support Files/Pods-News/Pods-News.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,8 +179,8 @@
 		820799BF2A0585730055C85F /* API */ = {
 			isa = PBXGroup;
 			children = (
-				820799C82A05865F0055C85F /* Service */,
 				820799C72A0586570055C85F /* Models */,
+				820799C82A05865F0055C85F /* Service */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -195,6 +197,7 @@
 		820799C32A0585E80055C85F /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				82F5E7372A30FC3E00469F65 /* Extensions */,
 				82D8465A28839CB600C766CD /* Views */,
 				820799BE2A05856E0055C85F /* Services */,
 				820799BA2A0585460055C85F /* MVVM Modules */,
@@ -452,6 +455,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		82F5E7372A30FC3E00469F65 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				82F5E7382A30FC5300469F65 /* View + Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		82FF293828DE531A004263F4 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -621,6 +632,7 @@
 				820799EF2A05A0DC0055C85F /* SearchNewsListViewViewModel.swift in Sources */,
 				820799FA2A05BD4D0055C85F /* Source.swift in Sources */,
 				820799C62A0586440055C85F /* TopNewsListView.swift in Sources */,
+				82F5E7392A30FC5300469F65 /* View + Extensions.swift in Sources */,
 				820799D12A058C760055C85F /* ArticleCell.swift in Sources */,
 				82D8464C28839C8000C766CD /* NewsApp.swift in Sources */,
 				820799F12A05A4690055C85F /* Categories.swift in Sources */,

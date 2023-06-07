@@ -34,8 +34,11 @@ struct RandomNewsListView: View {
                 })
                 .onAppear {
                     UITabBar.showTabBar(animated: true)
-             }
-        }
+                }
+                .onShake {
+                    viewModel.GenerateRandomNews()
+                }
+          }
     }
 }
 
