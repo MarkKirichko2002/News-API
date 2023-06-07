@@ -5,11 +5,13 @@
 //  Created by Марк Киричко on 05.05.2023.
 //
 
-import Foundation
+import SwiftUI
 
 class CurrentCategoryNewsListViewViewModel: ObservableObject {
     
     @Published var news = [Article]()
+    @AppStorage("isInteractiveOn") var isInteractiveOn = false
+    
     // MARK: - сервисы
     private let newsService = NewsService()
     private let player = AudioPlayer()
@@ -27,6 +29,10 @@ class CurrentCategoryNewsListViewViewModel: ObservableObject {
     }
     
     func PlayCurrentNewsCategorySound(sound: String) {
-        player.PlaySound(resource: sound)
+        if isInteractiveOn {
+            player.PlaySound(resource: sound)
+        } else {
+            print(isInteractiveOn)
+        }
     }
 }

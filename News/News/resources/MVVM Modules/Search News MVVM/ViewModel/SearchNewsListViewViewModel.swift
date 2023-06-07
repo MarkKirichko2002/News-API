@@ -5,7 +5,7 @@
 //  Created by Марк Киричко on 05.05.2023.
 //
 
-import Foundation
+import SwiftUI
 
 class SearchNewsListViewViewModel: ObservableObject {
     
@@ -18,6 +18,7 @@ class SearchNewsListViewViewModel: ObservableObject {
     @Published var isRecognizing = false
     @Published var title = "Поиск"
     @Published var selectedNewsCategory = Categories.categories[0]
+    @AppStorage("isInteractiveOn") var isInteractiveOn = false
     
     // MARK: - сервисы
     private let speechRecognitionManager = SpeechRecognitionManager()
@@ -62,7 +63,11 @@ class SearchNewsListViewViewModel: ObservableObject {
                 self?.news = news
                 self?.CategoryIcon = category.icon
                 self?.title = "\(category.name): \(news.count)"
-                self?.player.PlaySound(resource: category.sound)
+                if self?.isInteractiveOn ?? false {
+                    self?.player.PlaySound(resource: category.sound)
+                } else {
+                    print(self?.isInteractiveOn)
+                }
                 self?.CategorySound = category.sound
             case .failure(let error):
                 print(error)
@@ -98,6 +103,10 @@ class SearchNewsListViewViewModel: ObservableObject {
     
     // MARK: - воспроизведение аудио
     func PlayCategorySound() {
-        player.PlaySound(resource: CategorySound)
+        if isInteractiveOn {
+            player.PlaySound(resource: CategorySound)
+        } else {
+            print(isInteractiveOn)
+        }
     }
 }

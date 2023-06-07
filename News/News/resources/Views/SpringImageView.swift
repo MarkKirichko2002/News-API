@@ -10,6 +10,7 @@ import SwiftUI
 struct SpringImageView: View {
     
     @State var isAnimation = false
+    @AppStorage("isInteractiveOn") var isInteractiveOn = false
     
     var image: String
     var width: CGFloat
@@ -21,16 +22,20 @@ struct SpringImageView: View {
             .resizable()
             .aspectRatio(contentMode: .fill)
             .frame(width: width, height: height)
-            
+        
             .scaleEffect(isAnimation ? 1.1 : 1, anchor: .bottom)
             .animation(.interpolatingSpring(stiffness: 170, damping: 8).delay(0.4), value: isAnimation)
             .onTapGesture {
-                isAnimation.toggle()
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                    self.isAnimation = false
-                }
-              onTap()
-          }
+                if isInteractiveOn {
+                    isAnimation.toggle()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        self.isAnimation = false
+                    }
+                    onTap()
+                } else {
+                    print(isInteractiveOn)
+              }
+         }
     }
 }
 
