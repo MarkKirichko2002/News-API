@@ -30,15 +30,19 @@ struct SplashView: View {
                    .opacity(opacity)
                    .onAppear {
                        withAnimation(.easeIn(duration: 1.2)) {
-                           self.size = 1.9
-                           self.opacity = 1.00
+                           DispatchQueue.main.async {
+                               self.size = 1.9
+                               self.opacity = 1.00
+                           }
                        }
                    }
                }
                .onAppear {
                    DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                        withAnimation {
-                           self.isActive = true
+                           DispatchQueue.main.async {
+                               self.isActive = true
+                           }
                        }
                    }
                }
