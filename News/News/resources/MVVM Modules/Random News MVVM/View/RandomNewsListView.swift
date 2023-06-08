@@ -19,9 +19,6 @@ struct RandomNewsListView: View {
                 .toolbar(content: {
                     ToolbarItem(placement: .principal) {
                         HStack {
-                            SpringImageView(image: viewModel.CategoryIcon, width: 35, height: 35) {
-                                viewModel.PlayCategorySound()
-                            }
                             Text(viewModel.title)
                                 .fontWeight(.black)
                             Spacer()
@@ -39,12 +36,22 @@ struct RandomNewsListView: View {
                 .onAppear {
                     UITabBar.showTabBar(animated: true)
                 }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .overlay(alignment: .top) {
+                    GeometryReader { proxy in
+                        let size = proxy.size
+                        if UIDevice.hasDynamicIsland {
+                            NotificationView(size: size, category: viewModel.randomCategory).frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                        }
+                    }
+                    .ignoresSafeArea()
+                }
                 .onShake {
                     if viewModel.isShakeToGenerateOn {
                         viewModel.GenerateRandomNews()
                     } else {}
-              }
-         }
+             }
+        }
     }
 }
 
