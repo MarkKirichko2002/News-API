@@ -27,7 +27,7 @@ struct RoundedImageView: View {
         if isURL {
             WebImage(url: URL(string: image))
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                .aspectRatio(contentMode: .fill)
                 .frame(width: width, height: height)
                 .clipShape(Circle())
                 .overlay(Circle().stroke(color, lineWidth: lineWidth))
