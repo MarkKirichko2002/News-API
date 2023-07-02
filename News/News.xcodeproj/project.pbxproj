@@ -39,6 +39,8 @@
 		8234B3092A3271C20091810F /* UIDevice + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8234B3082A3271C20091810F /* UIDevice + Extensions.swift */; };
 		823CBF4B28903AEC0065F33E /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823CBF4A28903AEC0065F33E /* SplashView.swift */; };
 		82490F512A08155700C9A6CF /* SpringImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82490F502A08155700C9A6CF /* SpringImageView.swift */; };
+		824D9A322A522606003BE7C8 /* SpeechRecognitionManager + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824D9A312A522606003BE7C8 /* SpeechRecognitionManager + Extensions.swift */; };
+		824D9A352A52264F003BE7C8 /* SpeechRecognitionManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824D9A342A52264F003BE7C8 /* SpeechRecognitionManagerProtocol.swift */; };
 		826263192A27F429003C9E98 /* SettingsSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826263182A27F429003C9E98 /* SettingsSectionModel.swift */; };
 		82808E792A310C8000DEEB16 /* InteractiveOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82808E782A310C8000DEEB16 /* InteractiveOptionCell.swift */; };
 		82808E7B2A310D6F00DEEB16 /* ShakeToGenerateOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82808E7A2A310D6F00DEEB16 /* ShakeToGenerateOptionCell.swift */; };
@@ -94,6 +96,8 @@
 		8234B3082A3271C20091810F /* UIDevice + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice + Extensions.swift"; sourceTree = "<group>"; };
 		823CBF4A28903AEC0065F33E /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		82490F502A08155700C9A6CF /* SpringImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringImageView.swift; sourceTree = "<group>"; };
+		824D9A312A522606003BE7C8 /* SpeechRecognitionManager + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpeechRecognitionManager + Extensions.swift"; sourceTree = "<group>"; };
+		824D9A342A52264F003BE7C8 /* SpeechRecognitionManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionManagerProtocol.swift; sourceTree = "<group>"; };
 		826263182A27F429003C9E98 /* SettingsSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSectionModel.swift; sourceTree = "<group>"; };
 		82808E782A310C8000DEEB16 /* InteractiveOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveOptionCell.swift; sourceTree = "<group>"; };
 		82808E7A2A310D6F00DEEB16 /* ShakeToGenerateOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeToGenerateOptionCell.swift; sourceTree = "<group>"; };
@@ -210,6 +214,7 @@
 				8234B3042A326E020091810F /* Models */,
 				82F5E7372A30FC3E00469F65 /* Extensions */,
 				82D8465A28839CB600C766CD /* Views */,
+				824D9A332A522638003BE7C8 /* Protocols */,
 				820799BE2A05856E0055C85F /* Services */,
 				820799BA2A0585460055C85F /* MVVM Modules */,
 			);
@@ -318,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				820799E92A059FDA0055C85F /* SpeechRecognitionManager.swift */,
+				824D9A312A522606003BE7C8 /* SpeechRecognitionManager + Extensions.swift */,
 			);
 			path = "Speech Recognition";
 			sourceTree = "<group>";
@@ -386,6 +392,14 @@
 				8234B3052A326E260091810F /* NotificationModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		824D9A332A522638003BE7C8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				824D9A342A52264F003BE7C8 /* SpeechRecognitionManagerProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		82808E762A310C3E00DEEB16 /* Settings View */ = {
@@ -670,6 +684,7 @@
 				820799CA2A0587470055C85F /* TopNewsListViewViewModel.swift in Sources */,
 				82079A012A05CBD80055C85F /* RandomNewsListView.swift in Sources */,
 				8234B3062A326E260091810F /* NotificationModel.swift in Sources */,
+				824D9A352A52264F003BE7C8 /* SpeechRecognitionManagerProtocol.swift in Sources */,
 				820799C12A0585930055C85F /* NewsService.swift in Sources */,
 				82490F512A08155700C9A6CF /* SpringImageView.swift in Sources */,
 				820799EF2A05A0DC0055C85F /* SearchNewsListViewViewModel.swift in Sources */,
@@ -680,6 +695,7 @@
 				82D8464C28839C8000C766CD /* NewsApp.swift in Sources */,
 				820799F12A05A4690055C85F /* Categories.swift in Sources */,
 				820799F42A05AB680055C85F /* RandomManager.swift in Sources */,
+				824D9A322A522606003BE7C8 /* SpeechRecognitionManager + Extensions.swift in Sources */,
 				820799D72A058D7A0055C85F /* NewsCategoriesListView.swift in Sources */,
 				8234B3092A3271C20091810F /* UIDevice + Extensions.swift in Sources */,
 				820799D92A058DA70055C85F /* NewsCategoriesListViewViewModel.swift in Sources */,
