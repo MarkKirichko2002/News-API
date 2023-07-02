@@ -11,18 +11,14 @@ class SearchNewsListViewViewModel: ObservableObject {
     
     @Published var news = [Article]()
     @Published var searchText = ""
-    @Published var ButtonImage = "mic"
-    @Published var CategoryIcon = "news"
-    @Published var CategorySound = "newspaper.mp3"
-    @Published var isRecognizing = false
     @Published var title = "Поиск"
     @Published var selectedNewsCategory = Categories.categories[0]
-    @AppStorage("isInteractiveOn") var isInteractiveOn = false
     
     // MARK: - сервисы
     private let speechRecognitionManager = SpeechRecognitionManager()
     private let newsService = NewsService()
     private let player = AudioPlayer()
+    private let settingsManager = SettingsManager()
     
     // MARK: - Init
     init() {
@@ -31,14 +27,11 @@ class SearchNewsListViewViewModel: ObservableObject {
     
     // MARK: - распознавание речи
     func RecognizeNewsCategories() {
-        isRecognizing = !isRecognizing
-        if isRecognizing  {
+        if settingsManager.isMicrophoneOn {
             StartRecognizeNewsCategory()
-            ButtonImage = "mic.fill"
             title = "Поиск..."
         } else {
             StopRecognizeNewsCategory()
-            ButtonImage = "mic"
         }
     }
     
@@ -60,15 +53,14 @@ class SearchNewsListViewViewModel: ObservableObject {
             case .success(let data):
                 guard let news = data.articles else {return}
                 DispatchQueue.main.async {
+                    self?.selectedNewsCategory = category
                     self?.news = news
-                    self?.CategoryIcon = category.icon
                     self?.title = "\(category.name): \(news.count)"
-                    if self?.isInteractiveOn ?? false {
+                    if self?.settingsManager.checkInteractiveSetting() ?? false {
                         self?.player.PlaySound(resource: category.sound)
                     } else {
-                        print(self?.isInteractiveOn)
+                        print(self?.settingsManager.checkInteractiveSetting())
                     }
-                    self?.CategorySound = category.sound
                 }
             case .failure(let error):
                 print(error)
@@ -83,14 +75,12 @@ class SearchNewsListViewViewModel: ObservableObject {
             if text.lowercased().contains(category.voiceCommand) {
                 selectedNewsCategory = category
                 GetNews(category: category)
-                ButtonImage = "mic"
             }
         }
         speechRecognitionManager.cancelSpeechRecognition()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.speechRecognitionManager.startRecognize()
-            self.ButtonImage = "mic.fill"
         }
     }
     
@@ -104,10 +94,10 @@ class SearchNewsListViewViewModel: ObservableObject {
     
     // MARK: - воспроизведение аудио
     func PlayCategorySound() {
-        if isInteractiveOn {
-            player.PlaySound(resource: CategorySound)
+        if settingsManager.checkInteractiveSetting() {
+            player.PlaySound(resource: selectedNewsCategory.sound)
         } else {
-            print(isInteractiveOn)
+            print(settingsManager.checkInteractiveSetting())
         }
     }
 }

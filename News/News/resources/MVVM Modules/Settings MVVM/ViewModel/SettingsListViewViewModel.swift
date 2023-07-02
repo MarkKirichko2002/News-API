@@ -10,6 +10,7 @@ import SwiftUI
 class SettingsListViewViewModel: ObservableObject {
     
     @AppStorage("active_icon") var activeAppIcon: String = "AppIcon 1"
+    @AppStorage("isMicrophoneOn") var isMicrophoneOn = false
     @AppStorage("isInteractiveOn") var isInteractiveOn = false
     @AppStorage("isShakeToGenerateOn") var isShakeToGenerateOn = false
     
