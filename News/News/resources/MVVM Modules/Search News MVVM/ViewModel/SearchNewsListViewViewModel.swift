@@ -29,7 +29,6 @@ class SearchNewsListViewViewModel: ObservableObject {
     func RecognizeNewsCategories() {
         if settingsManager.isMicrophoneOn {
             StartRecognizeNewsCategory()
-            title = "Поиск..."
         } else {
             StopRecognizeNewsCategory()
         }
