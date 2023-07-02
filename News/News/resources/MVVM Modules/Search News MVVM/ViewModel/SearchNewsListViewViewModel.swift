@@ -43,14 +43,14 @@ class SearchNewsListViewViewModel: ObservableObject {
     }
     
     func StartRecognizeNewsCategory() {
-        speechRecognitionManager.startSpeechRecognition()
+        speechRecognitionManager.startRecognize()
         speechRecognitionManager.registerSpeechRecognitionHandler { text in
             self.GetSearchNews(text: text)
         }
     }
     
     func StopRecognizeNewsCategory() {
-        speechRecognitionManager.cancelSpeechRecognization()
+        speechRecognitionManager.cancelSpeechRecognition()
     }
     
     // MARK: - API запросы
@@ -86,10 +86,10 @@ class SearchNewsListViewViewModel: ObservableObject {
                 ButtonImage = "mic"
             }
         }
-        speechRecognitionManager.cancelSpeechRecognization()
+        speechRecognitionManager.cancelSpeechRecognition()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.speechRecognitionManager.startSpeechRecognition()
+            self.speechRecognitionManager.startRecognize()
             self.ButtonImage = "mic.fill"
         }
     }
