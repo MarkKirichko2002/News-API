@@ -29,6 +29,11 @@ struct SettingsListView: View {
                             UIApplication.shared.setAlternateIconName(newValue)
                      }
                 }
+                
+                Section(header: Text("голосовой поиск").foregroundColor(.black).fontWeight(.bold)) {
+                    SpeechRecognitionOptionCell(isMicrophoneOn: $viewModel.isMicrophoneOn)
+                }
+                
                 Section(header: Text("интерактивность").foregroundColor(.black).fontWeight(.bold)) {
                     InteractiveOptionCell(isInteractiveOn: $viewModel.isInteractiveOn)
                 }

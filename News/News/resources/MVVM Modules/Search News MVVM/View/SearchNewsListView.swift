@@ -22,18 +22,12 @@ struct SearchNewsListView: View {
                         HStack {
                             Spacer()
                             // иконка
-                            SpringImageView(image: viewModel.CategoryIcon, width: 35, height: 35) {
+                            SpringImageView(image: viewModel.selectedNewsCategory.icon, width: 35, height: 35) {
                                 viewModel.PlayCategorySound()
                             }
                             // название категории
                             Text(viewModel.title)
                                 .fontWeight(.black)
-                            // распознание речи
-                            Button {
-                                viewModel.RecognizeNewsCategories()
-                            } label: {
-                                Image(systemName: viewModel.ButtonImage)
-                            }
                             // категории новостей
                             Picker("", selection: $viewModel.selectedNewsCategory) {
                                 ForEach(Categories.categories, id: \.self) {
@@ -47,7 +41,11 @@ struct SearchNewsListView: View {
                 })
                 .onAppear {
                     UITabBar.showTabBar(animated: true)
+                    viewModel.RecognizeNewsCategories()
                 }
+                .onDisappear {
+                    viewModel.StopRecognizeNewsCategory()
+               }
         }
     }
 }

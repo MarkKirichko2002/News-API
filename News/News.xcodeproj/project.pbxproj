@@ -41,6 +41,8 @@
 		82490F512A08155700C9A6CF /* SpringImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82490F502A08155700C9A6CF /* SpringImageView.swift */; };
 		824D9A322A522606003BE7C8 /* SpeechRecognitionManager + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824D9A312A522606003BE7C8 /* SpeechRecognitionManager + Extensions.swift */; };
 		824D9A352A52264F003BE7C8 /* SpeechRecognitionManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824D9A342A52264F003BE7C8 /* SpeechRecognitionManagerProtocol.swift */; };
+		824D9A372A522A2C003BE7C8 /* SpeechRecognitionOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824D9A362A522A2C003BE7C8 /* SpeechRecognitionOptionCell.swift */; };
+		824D9A3A2A522C73003BE7C8 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824D9A392A522C73003BE7C8 /* SettingsManager.swift */; };
 		826263192A27F429003C9E98 /* SettingsSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826263182A27F429003C9E98 /* SettingsSectionModel.swift */; };
 		82808E792A310C8000DEEB16 /* InteractiveOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82808E782A310C8000DEEB16 /* InteractiveOptionCell.swift */; };
 		82808E7B2A310D6F00DEEB16 /* ShakeToGenerateOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82808E7A2A310D6F00DEEB16 /* ShakeToGenerateOptionCell.swift */; };
@@ -98,6 +100,8 @@
 		82490F502A08155700C9A6CF /* SpringImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringImageView.swift; sourceTree = "<group>"; };
 		824D9A312A522606003BE7C8 /* SpeechRecognitionManager + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpeechRecognitionManager + Extensions.swift"; sourceTree = "<group>"; };
 		824D9A342A52264F003BE7C8 /* SpeechRecognitionManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionManagerProtocol.swift; sourceTree = "<group>"; };
+		824D9A362A522A2C003BE7C8 /* SpeechRecognitionOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionOptionCell.swift; sourceTree = "<group>"; };
+		824D9A392A522C73003BE7C8 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		826263182A27F429003C9E98 /* SettingsSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSectionModel.swift; sourceTree = "<group>"; };
 		82808E782A310C8000DEEB16 /* InteractiveOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveOptionCell.swift; sourceTree = "<group>"; };
 		82808E7A2A310D6F00DEEB16 /* ShakeToGenerateOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeToGenerateOptionCell.swift; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 				820799E12A0594F70055C85F /* Audio Player */,
 				820799E82A059FC60055C85F /* Speech Recognition */,
 				820799F22A05AB5A0055C85F /* Random */,
+				824D9A382A522C65003BE7C8 /* Settings */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -402,6 +407,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		824D9A382A522C65003BE7C8 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				824D9A392A522C73003BE7C8 /* SettingsManager.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		82808E762A310C3E00DEEB16 /* Settings View */ = {
 			isa = PBXGroup;
 			children = (
@@ -413,6 +426,7 @@
 		82808E772A310C4700DEEB16 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				824D9A362A522A2C003BE7C8 /* SpeechRecognitionOptionCell.swift */,
 				82808E782A310C8000DEEB16 /* InteractiveOptionCell.swift */,
 				82808E7A2A310D6F00DEEB16 /* ShakeToGenerateOptionCell.swift */,
 			);
@@ -665,6 +679,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				824D9A3A2A522C73003BE7C8 /* SettingsManager.swift in Sources */,
 				820799E52A0597F80055C85F /* NewsCategoryCell.swift in Sources */,
 				82E7AB682A070C9500452798 /* SettingsListView.swift in Sources */,
 				820799CF2A058B690055C85F /* ArticlesListView.swift in Sources */,
@@ -693,6 +708,7 @@
 				82F5E7392A30FC5300469F65 /* View + Extensions.swift in Sources */,
 				820799D12A058C760055C85F /* ArticleCell.swift in Sources */,
 				82D8464C28839C8000C766CD /* NewsApp.swift in Sources */,
+				824D9A372A522A2C003BE7C8 /* SpeechRecognitionOptionCell.swift in Sources */,
 				820799F12A05A4690055C85F /* Categories.swift in Sources */,
 				820799F42A05AB680055C85F /* RandomManager.swift in Sources */,
 				824D9A322A522606003BE7C8 /* SpeechRecognitionManager + Extensions.swift in Sources */,
