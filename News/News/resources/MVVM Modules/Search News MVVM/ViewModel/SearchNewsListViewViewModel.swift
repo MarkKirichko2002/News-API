@@ -11,7 +11,6 @@ class SearchNewsListViewViewModel: ObservableObject {
     
     @Published var news = [Article]()
     @Published var searchText = ""
-    @Published var title = "Поиск"
     @Published var selectedNewsCategory = Categories.categories[0]
     
     // MARK: - сервисы
@@ -54,7 +53,6 @@ class SearchNewsListViewViewModel: ObservableObject {
                 DispatchQueue.main.async {
                     self?.selectedNewsCategory = category
                     self?.news = news
-                    self?.title = "\(category.name): \(news.count)"
                     if self?.settingsManager.checkInteractiveSetting() ?? false {
                         self?.player.PlaySound(resource: category.sound)
                     } else {
@@ -63,7 +61,6 @@ class SearchNewsListViewViewModel: ObservableObject {
                 }
             case .failure(let error):
                 print(error)
-                self?.title = "Ошибка"
             }
         }
     }

@@ -36,16 +36,6 @@ struct RandomNewsListView: View {
                 .onAppear {
                     UITabBar.showTabBar(animated: true)
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .overlay(alignment: .top) {
-                    GeometryReader { proxy in
-                        let size = proxy.size
-                        if UIDevice.hasDynamicIsland {
-                            NotificationView(size: size, category: viewModel.randomCategory).frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-                        }
-                    }
-                    .ignoresSafeArea()
-                }
                 .onShake {
                     if viewModel.isShakeToGenerateOn {
                         viewModel.GenerateRandomNews()

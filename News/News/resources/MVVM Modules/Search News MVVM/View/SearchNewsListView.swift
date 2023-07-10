@@ -26,7 +26,7 @@ struct SearchNewsListView: View {
                                 viewModel.PlayCategorySound()
                             }
                             // название категории
-                            Text(viewModel.title)
+                            Text("\(viewModel.selectedNewsCategory.name) \(viewModel.news.count)")
                                 .fontWeight(.black)
                             // категории новостей
                             Picker("", selection: $viewModel.selectedNewsCategory) {
