@@ -11,7 +11,7 @@ class SearchNewsListViewViewModel: ObservableObject {
     
     @Published var news = [Article]()
     @Published var searchText = ""
-    @Published var selectedNewsCategory = Categories.categories[0]
+    @Published var selectedNewsCategory = NewsCategories.categoriesList[0]
     
     // MARK: - сервисы
     private let speechRecognitionManager = SpeechRecognitionManager()
@@ -21,7 +21,7 @@ class SearchNewsListViewViewModel: ObservableObject {
     
     // MARK: - Init
     init() {
-        GetNews(category: Categories.categories[0])
+        GetNews(category: NewsCategories.categoriesList[0])
     }
     
     // MARK: - распознавание речи
@@ -67,7 +67,7 @@ class SearchNewsListViewViewModel: ObservableObject {
     
     // MARK: - поиск новостей
     private func GetSearchNews(text: String) {
-        for category in Categories.categories {
+        for category in NewsCategories.categoriesList {
             if text.lowercased().contains(category.voiceCommand) {
                 selectedNewsCategory = category
                 GetNews(category: category)

@@ -9,7 +9,7 @@ import Foundation
 
 class NewsCategoriesListViewViewModel: ObservableObject {
     
-    @Published var categories = Categories.categories
+    @Published var categories = NewsCategories.categoriesList
     // MARK: - сервисы
     private let newsService = NewsService()
     private let player = AudioPlayer()

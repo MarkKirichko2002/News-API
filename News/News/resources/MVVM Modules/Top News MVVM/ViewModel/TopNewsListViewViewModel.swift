@@ -19,7 +19,7 @@ class TopNewsListViewViewModel: ObservableObject {
     }
     
     func GetTopNews() {
-        newsService.execute(with: News.self, category: .general) { [weak self] result in
+        newsService.execute(with: News.self, category: .news) { [weak self] result in
             switch result {
             case .success(let data):
                 guard let news = data.articles else {return}

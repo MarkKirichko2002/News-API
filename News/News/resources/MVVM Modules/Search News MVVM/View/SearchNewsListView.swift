@@ -30,7 +30,7 @@ struct SearchNewsListView: View {
                                 .fontWeight(.black)
                             // категории новостей
                             Picker("", selection: $viewModel.selectedNewsCategory) {
-                                ForEach(Categories.categories, id: \.self) {
+                                ForEach(NewsCategories.categoriesList, id: \.self) {
                                     Text($0.name)
                                 }
                             }.onChange(of: viewModel.selectedNewsCategory) { category in

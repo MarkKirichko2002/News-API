@@ -9,7 +9,16 @@ import Foundation
 
 // MARK: - News
 struct News: Codable {
-    let status: String?
-    let totalResults: Int?
+    let status: String
+    let totalHits, page, totalPages, pageSize: Int?
     let articles: [Article]?
+
+    enum CodingKeys: String, CodingKey {
+        case status
+        case totalHits = "total_hits"
+        case page
+        case totalPages = "total_pages"
+        case pageSize = "page_size"
+        case articles
+    }
 }
