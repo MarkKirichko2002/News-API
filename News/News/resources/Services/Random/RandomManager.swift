@@ -9,7 +9,4 @@ import Foundation
 
 class RandomManager {
     
-    func ReturnRandomElement(array: [Any]) -> Any {
-        return array.randomElement()!
-    }
 }

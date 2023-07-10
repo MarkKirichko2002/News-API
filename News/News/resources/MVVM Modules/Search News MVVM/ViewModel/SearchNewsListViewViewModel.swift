@@ -56,7 +56,7 @@ class SearchNewsListViewViewModel: ObservableObject {
                     if self?.settingsManager.checkInteractiveSetting() ?? false {
                         self?.player.PlaySound(resource: category.sound)
                     } else {
-                        print(self?.settingsManager.checkInteractiveSetting())
+                        print(self?.settingsManager.checkInteractiveSetting() as? Bool ?? false)
                     }
                 }
             case .failure(let error):
