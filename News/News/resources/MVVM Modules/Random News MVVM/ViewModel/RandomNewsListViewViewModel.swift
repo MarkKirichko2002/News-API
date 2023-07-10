@@ -11,7 +11,7 @@ class RandomNewsListViewViewModel: ObservableObject {
     
     @Published var news = [Article]()
     @Published var title = "Рандом"
-    @Published var randomCategory = Categories.categories[0]
+    @Published var randomCategory = NewsCategories.categoriesList[0]
     @AppStorage("isInteractiveOn") var isInteractiveOn = false
     @AppStorage("isShakeToGenerateOn") var isShakeToGenerateOn = false
     
@@ -20,13 +20,9 @@ class RandomNewsListViewViewModel: ObservableObject {
     private let newsService = NewsService()
     private let player = AudioPlayer()
     
-    func GenerateRandomNewsNotification() {
-        NotificationCenter.default.post(name: .init("NOTIFY"), object: NotificationModel(title: "", content: ""))
-    }
-    
     // MARK: - генерация случайных статей
     func GenerateRandomNews() {
-        let category = randomManager.ReturnRandomElement(array: Categories.categories) as! NewsCategoryModel
+        let category = randomManager.ReturnRandomElement(array: NewsCategories.categoriesList) as! NewsCategoryModel
         title = category.name
         if isInteractiveOn {
             player.PlaySound(resource: category.sound)
@@ -41,7 +37,6 @@ class RandomNewsListViewViewModel: ObservableObject {
                     self?.news = news
                     self?.randomCategory = category
                     self?.randomCategory.articlesCount = news.count
-                    self?.GenerateRandomNewsNotification()
                 }
             case .failure(let error):
                 print(error)

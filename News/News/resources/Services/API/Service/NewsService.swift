@@ -10,8 +10,6 @@ import Foundation
 class NewsService {
     
     struct Contacts {
-        static let apiKey = "6b44da51f545440a81fd0ec4d6fc441a"
+        static let apiKey = "O2aHpnAuUoE0rvModM4G4K0wmbobXf-nqXD5B_UnCzE"
     }
-    
-    var url = ""
 }

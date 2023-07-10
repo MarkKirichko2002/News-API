@@ -14,7 +14,7 @@ struct ArticlesListView: View {
     var body: some View {
         List(news, id: \.title) { article in
             NavigationLink {
-                WebView(url: article.url)
+                WebView(url: article.link)
             } label: {
                 ArticleCell(article: article)
             }
