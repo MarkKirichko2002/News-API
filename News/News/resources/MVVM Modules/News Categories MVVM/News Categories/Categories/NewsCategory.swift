@@ -8,18 +8,10 @@
 import Foundation
 
 enum NewsCategory: String {
-    case news
-    case sport
-    case tech
-    case world
-    case finance
-    case business
-    case economics
-    case entertainment
-    case travel
-    case music
-    case food
-    case science
-    case gaming
-    case energy
+    case news = "general"
+    case sport = "sport"
+    case tech = "technology"
+    case business = "business"
+    case entertainment = "entertainment"
+    case science = "science"
 }

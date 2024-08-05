@@ -10,15 +10,17 @@ import Foundation
 // MARK: - News
 struct News: Codable {
     let status: String
-    let totalHits, page, totalPages, pageSize: Int?
-    let articles: [Article]?
+    let totalResults: Int
+    let articles: [Article]
+}
 
-    enum CodingKeys: String, CodingKey {
-        case status
-        case totalHits = "total_hits"
-        case page
-        case totalPages = "total_pages"
-        case pageSize = "page_size"
-        case articles
-    }
+// MARK: - Article
+struct Article: Identifiable, Codable {
+    let id = UUID()
+    let author, title: String
+    let description: String?
+    let url: String
+    let urlToImage: String?
+    let publishedAt: String
+    let content: String?
 }

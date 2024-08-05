@@ -13,30 +13,35 @@ struct NewsTabView: View {
             TopNewsListView()
                 .tabItem {
                     Image(systemName: "flame")
+                        .tint(Color.primary)
                     Text("главное")
                 }
             
             NewsCategoriesListView()
                 .tabItem {
                     Image(systemName: "newspaper")
+                        .tint(Color.primary)
                     Text("категории")
                 }
             
             RandomNewsListView()
                 .tabItem {
                     Image(systemName: "dice")
+                        .tint(Color.primary)
                     Text("рандом")
                 }
             
             SearchNewsListView()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
+                        .tint(Color.primary)
                     Text("поиск")
                 }
         
             SettingsListView()
                 .tabItem {
                     Image(systemName: "gear")
+                        .tint(Color.primary)
                     Text("настройки")
                 }
         }.accentColor(.black)

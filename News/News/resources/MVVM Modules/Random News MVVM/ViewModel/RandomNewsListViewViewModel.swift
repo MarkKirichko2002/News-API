@@ -32,11 +32,10 @@ class RandomNewsListViewViewModel: ObservableObject {
         newsService.execute(with: News.self, category: category.endpoint) { [weak self] result in
             switch result {
             case .success(let data):
-                guard let news = data.articles else {return}
                 DispatchQueue.main.async {
-                    self?.news = news
+                    self?.news = data.articles
                     self?.randomCategory = category
-                    self?.randomCategory.articlesCount = news.count
+                    self?.randomCategory.articlesCount = self?.news.count ?? 0
                 }
             case .failure(let error):
                 print(error)

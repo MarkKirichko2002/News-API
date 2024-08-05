@@ -12,7 +12,7 @@ struct NewsApp: App {
     
     var body: some Scene {
         WindowGroup {
-            SplashView()
+            NewsTabView()
         }
     }
 }

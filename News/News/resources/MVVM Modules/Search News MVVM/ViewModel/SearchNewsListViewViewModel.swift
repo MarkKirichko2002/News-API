@@ -49,10 +49,9 @@ class SearchNewsListViewViewModel: ObservableObject {
         newsService.execute(with: News.self, category: category.endpoint) { [weak self] result in
             switch result {
             case .success(let data):
-                guard let news = data.articles else {return}
                 DispatchQueue.main.async {
                     self?.selectedNewsCategory = category
-                    self?.news = news
+                    self?.news = data.articles
                     if self?.settingsManager.checkInteractiveSetting() ?? false {
                         self?.player.PlaySound(resource: category.sound)
                     } else {

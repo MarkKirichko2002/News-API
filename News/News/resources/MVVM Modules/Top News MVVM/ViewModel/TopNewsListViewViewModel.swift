@@ -10,6 +10,7 @@ import Foundation
 class TopNewsListViewViewModel: ObservableObject {
     
     @Published var news = [Article]()
+    
     // MARK: - сервисы
     private let newsService = NewsService()
     private let player = AudioPlayer()
@@ -22,9 +23,8 @@ class TopNewsListViewViewModel: ObservableObject {
         newsService.execute(with: News.self, category: .news) { [weak self] result in
             switch result {
             case .success(let data):
-                guard let news = data.articles else {return}
                 DispatchQueue.main.async {
-                    self?.news = news
+                    self?.news = data.articles
                 }
             case .failure(let error):
                 print(error)

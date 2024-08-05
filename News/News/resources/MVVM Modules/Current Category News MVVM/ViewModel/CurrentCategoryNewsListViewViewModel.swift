@@ -20,9 +20,8 @@ class CurrentCategoryNewsListViewViewModel: ObservableObject {
         newsService.execute(with: News.self, category: endpoint) { [weak self] result in
             switch result {
             case .success(let data):
-                guard let news = data.articles else {return}
                 DispatchQueue.main.async {
-                    self?.news = news
+                    self?.news = data.articles
                 }
             case .failure(let error):
                 print(error)

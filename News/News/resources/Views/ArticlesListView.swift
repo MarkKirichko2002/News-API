@@ -12,9 +12,9 @@ struct ArticlesListView: View {
     var news: [Article]
     
     var body: some View {
-        List(news, id: \.title) { article in
+        List(news) { article in
             NavigationLink {
-                WebView(url: article.link)
+                WebView(url: article.url)
             } label: {
                 ArticleCell(article: article)
             }
